@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
@@ -27,11 +27,11 @@ export default function Navbar(props) {
                   Home
                 </a>
               </li>
-              {/* <li className="nav-item">
-                <a className={`nav-link text-${props.mode === "light" ? "dark":"light"}`} href="/about">
+              <li className="nav-item">
+                <Link className={`nav-link text-${props.mode === "light" ? "dark":"light"}`} to="/about">
                   {props.aboutTitle}
-                </a>
-              </li> */}
+                </Link>
+              </li>
             </ul>
               <div className={`form-check form-switch text-${props.mode === "light" ? "dark":"light"}`}>
                 <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode} style={{backgroundColor:props.mode === "light" ? "#212529":"#f8f9fa"}}/>
